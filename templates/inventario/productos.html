@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Productos Disponibles
+{% endblock title %}
+
+{% block content %}
+
+<h2>Productos disponibles</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Stock</th>
+      <th>Categoría</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for producto in productos %}
+    <tr>
+      <td>{{ producto.nombre }}</td>
+      <td>${{ producto.precio }}</td>
+      <td>{{ producto.stock }}</td>
+      <td>{{ producto.categoria.nombre }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
