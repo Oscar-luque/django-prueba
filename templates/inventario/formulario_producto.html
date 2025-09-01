@@ -7,7 +7,11 @@ Formulario de Producto
 
 {% block content %}
 
-<h2 {%if form.instance.pk %}>Editar Producto {% else %} Crear {% endif %}</h2>
+{% if form.instance.pk %}
+<h2>Editar</h2>
+{% else %}
+<h2>Crear</h2>
+{% endif %}
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
