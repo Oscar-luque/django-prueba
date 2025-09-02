@@ -28,3 +28,6 @@ def eliminar_producto(request, pk):
         producto.delete()
         return redirect('inventario:productos_disponibles')
     return render(request, 'inventario/confirmar_eliminar.html', {'producto': producto})
+
+def index_view(request):
+    return render(request, 'base.html')

@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from inventario.views import index_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inventario/', include('inventario.urls')), # Incluye las URLs de la app inventario de urls.py
+    path('', index_view, name='index'), # Vista principal
+    path('ventas/', include('ventas.urls')), # Incluye las URLs de la app ventas de urls.py
 ]

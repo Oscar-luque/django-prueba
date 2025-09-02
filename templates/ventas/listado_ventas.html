@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lista de Ventas
+{% endblock title %}
+
+{% block content %}
+
+<h2>Lista de Ventas</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+    <th>Cliente</th>
+    <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for venta in ventas %}
+    <tr>
+    <td>{{ venta.cliente }}</td>
+    <td>{{ venta.fecha }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
