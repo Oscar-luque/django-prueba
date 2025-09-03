@@ -11,9 +11,9 @@
         <h1 class="mb-4">Sistema de Ventas e Inventario</h1>
         <div class="mb-4">
             <a href="{% url 'inventario:productos_disponibles' %}" class="btn btn-outline-primary">Stock de Productos</a>
-            <a href="{% url 'inventario:crear_producto' %}" class="btn btn-outline-success">Crear Producto</a>
-            <a href="{% url 'ventas:listado_cliente' %}" class="btn btn-outline-success">Clientes</a>
-            <a href="{% url 'ventas:formulario_cliente' %}" class="btn btn-outline-success">Crear Cliente</a>
+            <a href="{% url 'inventario:crear_producto' %}" class="btn btn-outline-success">Crear Producto</a><br>
+            <a href="{% url 'ventas:listado_cliente' %}" class="btn btn-outline-primary">Clientes</a>
+            <a href="{% url 'ventas:formulario_cliente' %}" class="btn btn-outline-success">Crear Cliente</a><br>
             <a href="{% url 'ventas:listado_ventas' %}" class="btn btn-outline-info">Ventas</a>
         </div>
         {% block content %}<h2>ESTA ES LA BASE DEL PROYECTO</h2>{% endblock %}
